@@ -27,6 +27,18 @@
 	<div><strong>Note:</strong> I did not find a standard fullscreen
 		option.</div>
 	<div>More on object: <a href='https://developer.mozilla.org/en/docs/Web/HTML/Element/object'>embed on MDN</a></div>
+
+	<h3>Source Code:</h3>
+	<pre>
+&lt;object
+	data=&quot;test.pdf&quot;
+	type=&quot;application/pdf&quot;
+	width=&quot;400&quot;
+	height=&quot;600&quot;&gt;
+	&lt;span style='color: red;'&gt;If the old browser does not support &lt;object&gt; tag, this red line will appear: &lt;a href=&quot;test.pdf&quot;&gt;test.pdf&lt;/a&gt;&lt;/span&gt;
+&lt;/object&gt;
+	</pre>
+
 	<div>
 		<object
 			data="test.pdf"
@@ -44,6 +56,16 @@
 	<div><strong>Warning:</strong> &lt;embed&gt; does not
 		have a closing tag; and you should use HTML5.</div>
 	<div>More on embed: <a href='https://developer.mozilla.org/en/docs/Web/HTML/Element/embed'>embed on MDN</a></div>
+
+	<h3>Source Code:</h3>
+	<pre>
+&lt;embed
+	src=&quot;test.pdf&quot;
+	type=&quot;application/pdf&quot;
+	width=&quot;400&quot;
+	height=&quot;600&quot;&gt;
+	</pre>
+
 	<div>
 		<embed
 			src="test.pdf"
@@ -57,6 +79,15 @@
 	<div><strong>Note:</strong> In HTML v 4.01, &lt;iframe&gt; has a
 		fullscreen option. Check MDN link below.</div>
 	<div>More on iframe: <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe'>iframe on MDN</a></div>
+
+	<h3>Source Code:</h3>
+	<pre>
+&lt;iframe
+	src=&quot;test.pdf&quot;
+	width=&quot;400&quot;
+	height=&quot;600&quot;&gt;&lt;/iframe&gt;
+	</pre>
+
 	<div>
 		 <iframe
 			src="test.pdf"
@@ -91,6 +122,14 @@
 		more than 10 minutes ago, and have still been waiting for a
 		response.</div>
 	
+	<h3>Source Code:</h3>
+	<pre>
+&lt;iframe
+	src=&quot;document-viewer/viewer.html&quot;
+	width=&quot;400&quot;
+	height=&quot;600&quot;&gt;&lt;/iframe&gt;
+	</pre>
+
 	<div>
 		 <iframe
 			src="document-viewer/viewer.html"
