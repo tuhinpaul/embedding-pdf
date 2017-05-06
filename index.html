@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Embedding PDF in HTML</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.29" />
+	<style type="text/css">
+		div {
+			padding: 0 0 1em 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div>This document demonstrates how to embed pdf files in
+		HTML (and PHP/ASP.Net/Java EE/ Ruby on Rails/Node.js,
+		etc.).</div>
+	
+	<div><strong>Note:</strong> I am addressing modern browsers (as of
+		May 06, 2017); and not focusing on the strange behaviours
+		(if any) of IE.</div>
+	
+	<div>I am showing four options here.
+		You may adjust width and height according to your needs.</div>
+	
+	<h1>Option 1/4: &lt;object&gt; tag</h1>
+	<div><strong>Note:</strong> I did not find a standard fullscreen
+		option.</div>
+	<div>More on object: <a href='https://developer.mozilla.org/en/docs/Web/HTML/Element/object'>embed on MDN</a></div>
+	<div>
+		<object
+			data="test.pdf"
+			type="application/pdf"
+			width="400"
+			height="600">
+			<span style='color: red;'>If the old browser does not support <pre>&lt;object&gt;</pre> tag, this red line will appear: <a href="test.pdf">test.pdf</a></span>
+		</object>
+	</div>
+
+
+	<h1>Option 2/4: &lt;embed&gt; tag</h1>
+	<div><strong>Note:</strong> I did not find a standard fullscreen
+		option.</div>
+	<div><strong>Warning:</strong> &lt;embed&gt; does not
+		have a closing tag; and you should use HTML5.</div>
+	<div>More on embed: <a href='https://developer.mozilla.org/en/docs/Web/HTML/Element/embed'>embed on MDN</a></div>
+	<div>
+		<embed
+			src="test.pdf"
+			type="application/pdf"
+			width="400"
+			height="600">
+	</div>
+
+
+	<h1>Option 3/4: &lt;iframe&gt; tag</h1>
+	<div><strong>Note:</strong> In HTML v 4.01, &lt;iframe&gt; has a
+		fullscreen option. Check MDN link below.</div>
+	<div>More on iframe: <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe'>iframe on MDN</a></div>
+	<div>
+		 <iframe
+			src="test.pdf"
+			width="400"
+			height="600"></iframe>
+	</div>
+
+
+
+	<h1>Option 4/4</h1>
+	<div>
+		There are many libraries to embed pdf files in HTML. I am going
+		to illustrate only one: <a href='https://github.com/documentcloud/document-viewer'>documentcloud's document-viewer</a>.</div>
+
+	<div><strong>TODO:</strong> Further details.</div>
+	<div>Please check these files and folders:
+		<div>
+			<pre>document-viewer/viewer.html</pre>
+			<pre>document-viewer/dist</pre>
+			<pre>document-viewer/public.</pre>
+		</div>
+		They come from the above-mentioned github link. I
+		think that the easiest way to use this library is: you have
+		to upload a document to documentcloud.org. Then you'd
+		probably get a json file link or actual json file that you may
+		use for the purposr of displaying that pdf. Replace the
+		demo link in document-viewer/viewer.html file with  the json
+		link for your document and then use the following iframe code
+		to include document-viewer/viewer.html file here.</div>
+
+	<div><strong>Note:</strong> I signed up with documentcloud.org
+		more than 10 minutes ago, and have still been waiting for a
+		response.</div>
+	
+	<div>
+		 <iframe
+			src="document-viewer/viewer.html"
+			width="400"
+			height="600"></iframe>
+	</div>
+</body>
+
+</html>
